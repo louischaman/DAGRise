@@ -1,3 +1,7 @@
+#' A function to get the inputs and outputs of each step
+#'
+#' @param sc the entire script
+#' @param step which step you're on
 get_in_out_step = function(sc, step){
       i = step
       starts = c(1, which(sc == "breakfunction()")+1)
