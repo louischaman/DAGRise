@@ -3,6 +3,6 @@
 .RData
 .Ruserdata
 DAGRise/
-example
+example/*
 !example/do_data_stuff.R
 !example/split_code.R
