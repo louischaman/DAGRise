@@ -1,10 +1,14 @@
+#' gets inputs and outputs of code
+#'
+#' @param sc source code
+#' @param step which step to get from
 get_in_out_step = function(sc, step){
       i = step
       starts = c(1, which(sc == "breakfunction()")+1)
       ends = c(which(sc == "breakfunction()")-1,length(sc))
       
       
-      dtm = getDetailedTimelines(sc, getInputs(sc))
+      dtm = CodeDepends::getDetailedTimelines(sc, getInputs(sc))
       
       
       dtm_steps = dtm$step %in% starts[i]:ends[i]
